@@ -7,18 +7,18 @@
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
 
-  /* Accent: indigo palette */
-  --color-accent-50: oklch(0.962 0.018 272);
-  --color-accent-100: oklch(0.930 0.034 272);
-  --color-accent-200: oklch(0.870 0.065 272);
-  --color-accent-300: oklch(0.785 0.115 272);
-  --color-accent-400: oklch(0.700 0.160 272);
-  --color-accent-500: oklch(0.585 0.190 272);
-  --color-accent-600: oklch(0.510 0.190 272);
-  --color-accent-700: oklch(0.457 0.168 272);
-  --color-accent-800: oklch(0.390 0.140 272);
-  --color-accent-900: oklch(0.340 0.115 272);
-  --color-accent-950: oklch(0.245 0.090 272);
+  /* Accent: rose palette */
+  --color-accent-50: oklch(0.969 0.015 12);
+  --color-accent-100: oklch(0.941 0.030 12);
+  --color-accent-200: oklch(0.892 0.058 12);
+  --color-accent-300: oklch(0.810 0.105 12);
+  --color-accent-400: oklch(0.712 0.160 12);
+  --color-accent-500: oklch(0.624 0.196 12);
+  --color-accent-600: oklch(0.555 0.196 12);
+  --color-accent-700: oklch(0.490 0.170 12);
+  --color-accent-800: oklch(0.420 0.140 12);
+  --color-accent-900: oklch(0.365 0.115 12);
+  --color-accent-950: oklch(0.260 0.085 12);
 }
 
 /* ── CSS variable design system ────────────────────── */
@@ -29,7 +29,7 @@
   --card-foreground: 240 10% 3.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 240 10% 3.9%;
-  --primary: 239 84% 67%;
+  --primary: 347 77% 50%;
   --primary-foreground: 0 0% 98%;
   --secondary: 240 4.8% 95.9%;
   --secondary-foreground: 240 5.9% 10%;
@@ -41,7 +41,7 @@
   --destructive-foreground: 0 0% 98%;
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
-  --ring: 239 84% 67%;
+  --ring: 347 77% 50%;
   --radius: 0.75rem;
 }
 
@@ -52,7 +52,7 @@
   --card-foreground: 0 0% 98%;
   --popover: 240 10% 5.5%;
   --popover-foreground: 0 0% 98%;
-  --primary: 239 84% 67%;
+  --primary: 347 77% 50%;
   --primary-foreground: 0 0% 98%;
   --secondary: 240 3.7% 15.9%;
   --secondary-foreground: 0 0% 98%;
@@ -64,7 +64,7 @@
   --destructive-foreground: 0 0% 98%;
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
-  --ring: 239 84% 67%;
+  --ring: 347 77% 50%;
 }
 
 /* ── Base styles ───────────────────────────────────── */
