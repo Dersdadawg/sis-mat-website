@@ -1,15 +1,16 @@
 export const siteConfig = {
-  schoolName: "Westfield Academy",
-  clubName: "Math Club",
-  tagline: "Where curiosity meets proof.",
+  schoolName: "Seoul International School",
+  clubName: "Mu Alpha Theta",
+  tagline: "The one and only Math Club at SIS",
   description:
-    "We are a group of students passionate about mathematics — from contest prep to collaborative problem-solving. Everyone is welcome, from beginners to competition veterans.",
+    "Mu Alpha Theta (or MAΘ) aims to foster a love for mathematics and train problem solving skills. Our competition team allows members to take part in a variety of global competitions, while our general branch encourages exploration of recreational and pure mathematics.
+",
 
   // Hero section
   hero: {
-    title: "Westfield Academy Math Club",
+    title: "SIS Mu Alpha Theta",
     subtitle:
-      "Explore the beauty of mathematics through competitions, workshops, and community.",
+      "Explore the beauty of mathematics through competitions, general meetings, and more.",
     // Place your hero image in /public/images/hero.jpg (recommended: 1920×1080 or larger)
     backgroundImage: "/images/hero.svg",
   },
@@ -17,7 +18,7 @@ export const siteConfig = {
   // Announcement banner (set enabled: false to hide)
   announcement: {
     enabled: true,
-    message: "🎉 Registration for AMC 2026 is now open — sign up by Feb 20!",
+    message: "Registration for CEMC is now open — sign up soon!",
     link: "/competitions",
     linkText: "Learn more",
   },
@@ -38,41 +39,29 @@ export const siteConfig = {
     {
       title: "Contest Prep",
       description:
-        "Weekly sessions focused on AMC, AIME, MATHCOUNTS, and olympiad-level problems.",
+        "Weekly sessions focused on AMC, AIME, CEMC, and olympiad-level problems.",
       icon: "Trophy",
     },
     {
-      title: "Peer Tutoring",
+      title: "General Meeting",
       description:
-        "Upper-class mentors help underclassmen build strong foundations in algebra, geometry, and beyond.",
+        "Exploration of interesting topics and games in mathematics such as codebreakers or auction strategies.",
       icon: "Users",
-    },
-    {
-      title: "Guest Lectures",
-      description:
-        "Professors and alumni visit to talk about research, careers, and the cutting edge of math.",
-      icon: "GraduationCap",
-    },
-    {
-      title: "Community",
-      description:
-        "Game nights, pi day celebrations, and a welcoming space for anyone who loves math.",
-      icon: "Heart",
     },
   ],
 
   // Upcoming events
   upcoming: {
     nextMeeting: {
-      date: "February 12, 2026",
-      time: "3:30 PM",
-      location: "Room 214, Science Building",
-      topic: "AIME Preparation — Combinatorics Focus",
+      date: "February 13, 2026",
+      time: "1:10 PM",
+      location: "Room 116, Mr. Warkentin's Room",
+      topic: "TBD",
     },
     nextCompetition: {
-      name: "AMC 10/12 B",
-      date: "February 18, 2026",
-      location: "Main Auditorium",
+      name: "CEMC",
+      date: "To be announced",
+      location: "M116",
     },
   },
 
@@ -88,76 +77,65 @@ export const siteConfig = {
     mission:
       "Our mission is to foster a love of mathematics, support students in math competitions, and build a collaborative community of problem solvers.",
     founded: 2018,
-    meetingSchedule: "Every Wednesday, 3:30–5:00 PM in Room 214",
+    meetingSchedule: "Every Friday, 1:10–1:40 PM in Room 116",
     milestones: [
-      { year: 2018, event: "Math Club founded with 12 members" },
-      { year: 2019, event: "First team qualifies for state MATHCOUNTS" },
-      { year: 2020, event: "Launched virtual problem sets during remote learning" },
-      { year: 2021, event: "Grew to 45 active members" },
-      { year: 2022, event: "Three students qualify for AIME" },
-      { year: 2023, event: "Hosted first inter-school math relay" },
-      { year: 2024, event: "Two students qualify for USAMO" },
       { year: 2025, event: "Launched online worksheet archive" },
     ],
     officers: [
       {
-        name: "Alex Chen",
+        name: "Jiwu Lee",
         role: "President",
-        bio: "Senior. AIME qualifier. Loves number theory.",
+        bio: "Yeth",
         photo: "/images/officers/alex.svg",
-        email: "alex@example.com",
+        email: "jiwu.lee27@siskorea.org",
       },
       {
-        name: "Priya Patel",
+        name: "Dom Min",
         role: "Vice President",
-        bio: "Junior. Passionate about geometry and outreach.",
+        bio: "I love math",
         photo: "/images/officers/priya.svg",
-        email: "priya@example.com",
+        email: "dom.min27@stu.siskorea.org",
       },
       {
-        name: "Marcus Johnson",
-        role: "Treasurer",
-        bio: "Senior. Combinatorics enthusiast.",
+        name: "Jion Choi",
+        role: "Public Relations",
+        bio: "On the gram",
         photo: "/images/officers/marcus.svg",
-        email: "marcus@example.com",
+        email: "jion.choi29@stu.siskorea.org",
       },
       {
-        name: "Sophie Williams",
-        role: "Secretary",
-        bio: "Junior. Organizes workshops and social events.",
+        name: "Anders Christensen",
+        role: "Competition Team Captain",
+        bio: "Da big ders",
         photo: "/images/officers/sophie.svg",
-        email: "sophie@example.com",
+        email: "anders.christensen27@stu.siskorea.org",
       },
     ],
   },
 
   // Contact
   contact: {
-    email: "mathclub@westfieldacademy.edu",
-    advisorName: "Ms. Rivera",
-    advisorEmail: "m.rivera@westfieldacademy.edu",
+    email: "jiwu.lee27@stu.siskorea.org",
+    advisorName: "Mr. Warkentin, Mr. Sydow",
+    advisorEmail: "warkentinn@siskorea.org, sydowa@siskorea.org",
     qrCodeImage: "/images/qr-code.svg",
     formSubjectPrefix: "[Math Club Inquiry]",
   },
 
   // Social links (set to "" or remove to hide)
   socials: {
-    instagram: "https://instagram.com/wamathclub",
-    twitter: "",
-    github: "https://github.com/wa-math-club",
-    youtube: "",
-    discord: "https://discord.gg/example",
-    email: "mathclub@westfieldacademy.edu",
+    instagram: "https://instagram.com/sis.mualphatheta",
+    youtube: "Coming Soon!",
   },
 
   // Footer
   footer: {
     blurb:
-      "Westfield Academy Math Club — inspiring the next generation of mathematicians since 2018.",
+      "SIS Mu Alpha Theta — the best.",
   },
 
   // Accent color (Tailwind class name)
-  accentColor: "indigo",
+  accentColor: "Rose",
 };
 
 export type SiteConfig = typeof siteConfig;
