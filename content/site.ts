@@ -3,8 +3,7 @@ export const siteConfig = {
   clubName: "Mu Alpha Theta",
   tagline: "The one and only Math Club at SIS",
   description:
-    "Mu Alpha Theta (or MAΘ) aims to foster a love for mathematics and train problem solving skills. Our competition team allows members to take part in a variety of global competitions, while our general branch encourages exploration of recreational and pure mathematics.
-"},
+    "Mu Alpha Theta (or MAΘ) aims to foster a love for mathematics and train problem solving skills. Our competition team allows members to take part in a variety of global competitions, while our general branch encourages exploration of recreational and pure mathematics."},
 
   // Hero section
   hero: {
