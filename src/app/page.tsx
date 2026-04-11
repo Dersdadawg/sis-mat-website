@@ -19,6 +19,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion";
 import { KaTeXBlock } from "@/components/katex-render";
+import { cn } from "@/lib/utils";
 import { siteConfig } from "../../content/site";
 import { competitions } from "../../content/competitions";
 import { worksheets } from "../../content/worksheets";
@@ -37,6 +38,8 @@ export default function HomePage() {
 
   const featuredWorksheet = worksheets.find((w) => w.featured) || worksheets[0];
 
+  const heroTextHidden = siteConfig.hero.showText === false;
+
   return (
     <div>
       {/* ── Hero ──────────────────────────────────────── */}
@@ -51,10 +54,17 @@ export default function HomePage() {
             priority
             unoptimized
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[hsl(var(--background))]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 via-45% to-[hsl(var(--background))]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-32 sm:py-44">
+        <div
+          className={cn(
+            "relative z-10 max-w-6xl mx-auto px-4 sm:px-6",
+            heroTextHidden
+              ? "min-h-[min(72vh,760px)] sm:min-h-[min(76vh,820px)] flex flex-col justify-end pb-14 sm:pb-20 pt-24 sm:pt-28"
+              : "py-32 sm:py-44"
+          )}
+        >
           {(siteConfig.hero.showText ?? true) && (
             <>
               <FadeIn>
@@ -70,7 +80,12 @@ export default function HomePage() {
             </>
           )}
           <FadeIn delay={siteConfig.hero.showText === false ? 0 : 0.3}>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div
+              className={cn(
+                "flex flex-wrap gap-4",
+                heroTextHidden ? "mt-0" : "mt-8"
+              )}
+            >
               <Link href="/contact">
                 <Button size="lg" className="bg-accent-600 hover:bg-accent-700 text-white">
                   Join the Club
