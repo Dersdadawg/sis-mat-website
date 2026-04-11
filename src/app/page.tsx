@@ -55,17 +55,21 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-32 sm:py-44">
-          <FadeIn>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight max-w-4xl">
-              {siteConfig.hero.title}
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.15}>
-            <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
-              {siteConfig.hero.subtitle}
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.3}>
+          {(siteConfig.hero.showText ?? true) && (
+            <>
+              <FadeIn>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight max-w-4xl">
+                  {siteConfig.hero.title}
+                </h1>
+              </FadeIn>
+              <FadeIn delay={0.15}>
+                <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
+                  {siteConfig.hero.subtitle}
+                </p>
+              </FadeIn>
+            </>
+          )}
+          <FadeIn delay={siteConfig.hero.showText === false ? 0 : 0.3}>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-accent-600 hover:bg-accent-700 text-white">

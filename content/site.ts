@@ -7,6 +7,8 @@ export const siteConfig = {
 
   // Hero section
   hero: {
+    /** Set false when the banner image already includes the club name / headline */
+    showText: false,
     title: "SIS Mu Alpha Theta",
     subtitle:
       "Explore the beauty of mathematics through competitions, general meetings, and more.",
