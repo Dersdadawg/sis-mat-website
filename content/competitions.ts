@@ -14,15 +14,15 @@ export interface CompetitionResult {
 
 export const competitions: CompetitionResult[] = [
   {
-    id: "amc-2025-fall",
-    name: "AMC 10/12 A",
-    date: "November 6, 2025",
+    id: "SKISMC-junior-2025",
+    name: "SKISMC (Junior)",
+    date: "November 11, 2025",
     year: 2025,
-    category: "individual",
-    participants: ["Alex Chen", "Priya Patel", "Marcus Johnson"],
-    placement: "3 AIME Qualifiers",
-    awardLevel: "qualifier",
-    notes: "Alex scored 126 on AMC 12A — personal best!",
+    category: "team",
+    participants: ["6 teams of 3"],
+    placement: "1 Gold, 6 Silver, 9 Bronze",
+    awardLevel: ["gold", "silver", "bronze"],
+    notes: "Yejun Kim  received recognition for overall high score in the competition and earned a spot in the World Junior Finals in Melbourne Australia. ",
     featured: true,
   },
   {
