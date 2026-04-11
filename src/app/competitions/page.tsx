@@ -292,7 +292,8 @@ function CompetitionCard({ result }: { result: CompetitionResult }) {
       </CardContent>
     </Card>
   );
-  function ParticipantList({ participants }: { participants: string[] }) {
+}
+function ParticipantList({ participants }: { participants: string[] }) {
   const [expanded, setExpanded] = useState(false);
   const LIMIT = 2;
 
@@ -311,5 +312,4 @@ function CompetitionCard({ result }: { result: CompetitionResult }) {
       </button>
     </span>
   );
-}
 }
