@@ -30,8 +30,7 @@ export const worksheets: Worksheet[] = [
     tags: ["Algebra"],
     description:
       "20 practice problems covering quadratics, systems, and polynomial manipulation at the AMC 10 level.",
-    pdfUrl: "/worksheets/amc10-algebra-drills.pdf",
-    solutionsUrl: "/worksheets/amc10-algebra-drills-solutions.pdf",
+    pdfUrl: "/images/worksheets/MAT%20HW14.pdf",
     featured: true,
   },
   {
