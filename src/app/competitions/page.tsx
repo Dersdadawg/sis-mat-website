@@ -197,7 +197,7 @@ export default function CompetitionsPage() {
                     {c.category}
                   </td>
                   <td className="px-4 py-3 text-[hsl(var(--muted-foreground))]">
-                    {c.participants.join(", ")}
+                    {<ParticipantList participants={c.participants} />}
                   </td>
                   <td className="px-4 py-3 font-medium">{c.placement}</td>
                   <td className="px-4 py-3">
@@ -270,7 +270,7 @@ function CompetitionCard({ result }: { result: CompetitionResult }) {
           <span className="text-[hsl(var(--muted-foreground))]">
             {result.category}:
           </span>{" "}
-          {result.participants.join(", ")}
+          {<ParticipantList participants={result.participants} />}
         </div>
         <div className="font-medium text-accent-600">{result.placement}</div>
         {result.notes && (
@@ -292,4 +292,24 @@ function CompetitionCard({ result }: { result: CompetitionResult }) {
       </CardContent>
     </Card>
   );
+  function ParticipantList({ participants }: { participants: string[] }) {
+  const [expanded, setExpanded] = useState(false);
+  const LIMIT = 2;
+
+  if (participants.length <= LIMIT) {
+    return <span>{participants.join(", ")}</span>;
+  }
+
+  return (
+    <span>
+      {expanded ? participants.join(", ") : `${participants.slice(0, LIMIT).join(", ")} +${participants.length - LIMIT}`}
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="ml-1 text-accent-600 hover:underline text-xs font-medium"
+      >
+        {expanded ? "show less" : "show all"}
+      </button>
+    </span>
+  );
+}
 }
