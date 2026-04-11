@@ -17,14 +17,14 @@ export const siteConfig = {
   // Announcement banner (set enabled: false to hide)
   announcement: {
     enabled: true,
-    message: "Registration for CEMC is now open — sign up soon!",
+    message: "Registration for SKISMC is due soon. Sign up soon!",
     link: "/competitions",
     linkText: "Learn more",
   },
 
   // Problem of the Week (supports LaTeX via KaTeX)
   problemOfTheWeek: {
-    enabled: true,
+    enabled: false,
     title: "Problem of the Week",
     // Use LaTeX notation: wrap math in $...$ for inline or $$...$$ for display
     problem:
@@ -44,7 +44,7 @@ export const siteConfig = {
     {
       title: "General Meeting",
       description:
-        "Exploration of interesting topics and games in mathematics such as codebreakers or auction strategies.",
+        "Exploration of interesting topics and games in mathematics such as codebreakers.",
       icon: "Users",
     },
   ],
@@ -108,6 +108,13 @@ export const siteConfig = {
         bio: "Da big ders",
         photo: "/images/officers/sophie.svg",
         email: "anders.christensen27@stu.siskorea.org",
+      },
+      {
+        name: "Minjoo Kim",
+        role: "Competition Team Captain",
+        bio: "That's fire",
+        photo: "/images/officers/marcus.svg",
+        email: "minjoo.kim28@stu.siskorea.org",
       },
     ],
   },
