@@ -21,7 +21,7 @@ export const competitions: CompetitionResult[] = [
     category: "team",
     participants: ["6 teams of 3"],
     placement: "1 Gold, 6 Silver, 8 Bronze",
-    awardLevel: ["gold", "bronze", "silver"],
+    awardLevel: "gold",
     notes: "Yejun Kim received recognition for overall high score in the competition and earned a spot in the World Junior Finals in Melbourne Australia. ",
     featured: true,
   },
