@@ -54,7 +54,6 @@ export default function HomePage() {
             priority
             unoptimized
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-[hsl(var(--background))]" />
         </div>
 
         <div
