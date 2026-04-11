@@ -37,31 +37,30 @@ export default function WorksheetsPage() {
   };
 
   const filtered = useMemo(() => {
-    let results = [...worksheets];
+  let results = [...worksheets];
 
-    // Featured first
-    results.sort((a, b) => {
-      if (a.featured && !b.featured) return -1;
-      if (!a.featured && b.featured) return 1;
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    });
+  if (searchQuery.trim()) {
+    const q = searchQuery.toLowerCase();
+    results = results.filter(
+      (w) =>
+        w.title.toLowerCase().includes(q) ||
+        w.description.toLowerCase().includes(q) ||
+        w.tags.some((t) => t.toLowerCase().includes(q))
+    );
+  }
 
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      results = results.filter(
-        (w) =>
-          w.title.toLowerCase().includes(q) ||
-          w.description.toLowerCase().includes(q) ||
-          w.tags.some((t) => t.toLowerCase().includes(q))
-      );
-    }
+  if (activeTags.size > 0) {
+    results = results.filter((w) => w.tags.some((t) => activeTags.has(t)));
+  }
 
-    if (activeTags.size > 0) {
-      results = results.filter((w) => w.tags.some((t) => activeTags.has(t)));
-    }
+  results.sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return new Date(b.sortdate).getTime() - new Date(a.sortdate).getTime();
+  });
 
-    return results;
-  }, [searchQuery, activeTags]);
+  return results;
+}, [searchQuery, activeTags]);
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
