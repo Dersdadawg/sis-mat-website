@@ -37,7 +37,7 @@ export default function CompetitionsPage() {
     let results = [...competitions];
 
     if (timeFilter === "upcoming") {
-      results = results.filter(isUpcomingCompetition);
+      results = results.filter((c) => isUpcomingCompetition(c));
     } else if (timeFilter === "past") {
       results = results.filter((c) => !isUpcomingCompetition(c));
     }
