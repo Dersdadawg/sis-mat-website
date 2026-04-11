@@ -79,7 +79,6 @@ export const competitions: CompetitionResult[] = [
     awardLevel: "none",
     notes: "no results yet",
   },
-  {
 ];
 
 // Helper to get unique years
