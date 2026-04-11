@@ -7,6 +7,7 @@ export type Tag =
   | "Number Theory"
   | "Mixed"
   | "Beginner"
+  | "Intermediate"
   | "Advanced"
   | "Homework"
   | "Problem Set";
@@ -57,7 +58,7 @@ export const worksheets: Worksheet[] = [
     tags: ["Combinatorics", "Intermediate", "Homework"],
     description:
       "Homework problems on Stars and Bars, one of the most common ways to solve combinatorics problems.",
-    pdfUrl: "/images/worksheets/MAT_HW_Set_13.pdf",
+    pdfUrl: "/images/worksheets/MAT_HW_Set_12 (1).pdf",
   },
   {
     id: "2026-hwset11-bases",
@@ -101,7 +102,7 @@ export const worksheets: Worksheet[] = [
     tags: ["Number Theory", "Beginner", "Homework"],
     description:
       "Learn about and solve questions on modular arithmetic and Euler's totient theorem.",
-    pdfUrl: "/images/worksheets/MAT_HW_1_17.pdff",
+    pdfUrl: "/images/worksheets/MAT_HW_1_17.pdf",
   },
   {
     id: "2026-hwset7-pascals",
