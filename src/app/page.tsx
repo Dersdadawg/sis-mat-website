@@ -32,7 +32,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function HomePage() {
   const recentResults = [...competitions]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => b.sortDate.localeCompare(a.sortDate))
     .slice(0, 3);
 
   const featuredWorksheet = worksheets.find((w) => w.featured) || worksheets[0];

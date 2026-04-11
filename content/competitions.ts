@@ -1,7 +1,10 @@
 export interface CompetitionResult {
   id: string;
   name: string;
+  /** Display string shown in the UI */
   date: string;
+  /** ISO YYYY-MM-DD (event start); used for sorting and upcoming/past */
+  sortDate: string;
   year: number;
   category: "individual" | "team";
   participants: string[];
@@ -17,6 +20,7 @@ export const competitions: CompetitionResult[] = [
     id: "skismc-2025-junior",
     name: "SKISMC (Junior)",
     date: "November 11, 2025",
+    sortDate: "2025-11-11",
     year: 2025,
     category: "team",
     participants: ["Yejun Kim", "Hyein Jeong + 13"],
@@ -29,6 +33,7 @@ export const competitions: CompetitionResult[] = [
     id: "himcm-2025",
     name: "HiMCM",
     date: "November 7-9, 2025",
+    sortDate: "2025-11-07",
     year: 2025,
     category: "team",
     participants: ["Jiwu Lee", "Anders Christensen + 21"],
@@ -39,6 +44,7 @@ export const competitions: CompetitionResult[] = [
     id: "comc-2025",
     name: "COMC",
     date: "October 30, 2025",
+    sortDate: "2025-10-30",
     year: 2025,
     category: "individual",
     participants: ["Jiwu Lee", "Anders Christensen + 18"],
@@ -49,6 +55,7 @@ export const competitions: CompetitionResult[] = [
     id: "aisa-2025",
     name: "AISA",
     date: "January 30-31, 2026",
+    sortDate: "2026-01-30",
     year: 2026,
     category: "team",
     participants: ["Jiwu Lee", "Russell Jin", "Dom Min", "Minjoo Kim", "Jion Choi", "Jinwoo Park"],
@@ -61,6 +68,7 @@ export const competitions: CompetitionResult[] = [
     id: "cemc-mcq-2026",
     name: "CEMC",
     date: "February 26, 2026",
+    sortDate: "2026-02-26",
     year: 2026,
     category: "individual",
     participants: ["Jiwu Lee", "Anders Christensen + 36"],
@@ -72,6 +80,7 @@ export const competitions: CompetitionResult[] = [
     id: "pcmc-2026",
     name: "Purple Comet",
     date: "April 16, 2026",
+    sortDate: "2026-04-16",
     year: 2026,
     category: "team",
     participants: ["Jiwu Lee", "Anders Christensen + 14"],
@@ -89,4 +98,17 @@ export function getCompetitionYears(): number[] {
 // Helper to get unique competition names
 export function getCompetitionNames(): string[] {
   return [...new Set(competitions.map((c) => c.name))].sort();
+}
+
+/** Local calendar date as YYYY-MM-DD */
+export function getTodaySortDate(): string {
+  const t = new Date();
+  const y = t.getFullYear();
+  const m = String(t.getMonth() + 1).padStart(2, "0");
+  const d = String(t.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+export function isUpcomingCompetition(c: CompetitionResult, today = getTodaySortDate()): boolean {
+  return c.sortDate >= today;
 }

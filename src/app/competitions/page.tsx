@@ -10,6 +10,7 @@ import { FadeIn, FadeInStagger, FadeInItem } from "@/components/motion";
 import {
   competitions,
   getCompetitionYears,
+  isUpcomingCompetition,
   type CompetitionResult,
 } from "../../../content/competitions";
 
@@ -27,16 +28,25 @@ export default function CompetitionsPage() {
   const [yearFilter, setYearFilter] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [awardsOnly, setAwardsOnly] = useState(false);
+  const [timeFilter, setTimeFilter] = useState<"all" | "upcoming" | "past">(
+    "all"
+  );
+  const [dateSort, setDateSort] = useState<"asc" | "desc">("desc");
 
   const filtered = useMemo(() => {
     let results = [...competitions];
 
-    // Featured first, then by date
-    results.sort((a, b) => {
-      if (a.featured && !b.featured) return -1;
-      if (!a.featured && b.featured) return 1;
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    });
+    if (timeFilter === "upcoming") {
+      results = results.filter(isUpcomingCompetition);
+    } else if (timeFilter === "past") {
+      results = results.filter((c) => !isUpcomingCompetition(c));
+    }
+
+    results.sort((a, b) =>
+      dateSort === "asc"
+        ? a.sortDate.localeCompare(b.sortDate)
+        : b.sortDate.localeCompare(a.sortDate)
+    );
 
     if (yearFilter !== "all") {
       results = results.filter((c) => c.year === parseInt(yearFilter));
@@ -55,7 +65,7 @@ export default function CompetitionsPage() {
     }
 
     return results;
-  }, [yearFilter, searchQuery, awardsOnly]);
+  }, [yearFilter, searchQuery, awardsOnly, timeFilter, dateSort]);
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
@@ -96,6 +106,29 @@ export default function CompetitionsPage() {
                 {y}
               </option>
             ))}
+          </select>
+
+          <select
+            value={timeFilter}
+            onChange={(e) =>
+              setTimeFilter(e.target.value as "all" | "upcoming" | "past")
+            }
+            className="h-10 rounded-lg border border-[hsl(var(--input))] bg-transparent px-3 text-sm focus:outline-none focus:ring-2 focus:ring-[hsl(var(--ring))]"
+            aria-label="Show upcoming or past competitions"
+          >
+            <option value="all">All dates</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="past">Past</option>
+          </select>
+
+          <select
+            value={dateSort}
+            onChange={(e) => setDateSort(e.target.value as "asc" | "desc")}
+            className="h-10 rounded-lg border border-[hsl(var(--input))] bg-transparent px-3 text-sm focus:outline-none focus:ring-2 focus:ring-[hsl(var(--ring))]"
+            aria-label="Sort by date"
+          >
+            <option value="desc">Latest date first</option>
+            <option value="asc">Earliest date first</option>
           </select>
 
           <Button
