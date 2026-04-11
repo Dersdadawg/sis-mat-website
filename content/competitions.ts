@@ -6,7 +6,7 @@ export interface CompetitionResult {
   category: "individual" | "team";
   participants: string[];
   placement: string;
-  awardLevel: "gold" | "silver" | "bronze" | "honorable" | "qualifier" | "none";
+  awardLevel: "gold" | "silver" | "bronze" | "honorable" | "qualifier" | "none" | ("gold" | "silver" | "bronze" | "honorable" | "qualifier" | "none")[];
   notes?: string;
   photosUrl?: string;
   featured?: boolean;
