@@ -54,13 +54,13 @@ export const siteConfig = {
   // Upcoming events
   upcoming: {
     nextMeeting: {
-      date: "February 13, 2026",
+      date: "April 17, 2026",
       time: "1:10 PM",
       location: "Room 116, Mr. Warkentin's Room",
       topic: "TBD",
     },
     nextCompetition: {
-      name: "CEMC",
+      name: "Purple Comet",
       date: "To be announced",
       location: "M116",
     },
