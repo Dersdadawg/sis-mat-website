@@ -7,6 +7,7 @@ import {
   Home,
   Trophy,
   FileText,
+  Presentation,
   Info,
   Mail,
   Search,
@@ -18,6 +19,7 @@ const pages = [
   { name: "Home", href: "/", icon: Home },
   { name: "Competitions & Results", href: "/competitions", icon: Trophy },
   { name: "Worksheets", href: "/worksheets", icon: FileText },
+  { name: "Resources", href: "/resources", icon: Presentation },
   { name: "About", href: "/about", icon: Info },
   { name: "Contact", href: "/contact", icon: Mail },
 ];
