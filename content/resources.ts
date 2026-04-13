@@ -28,14 +28,6 @@ export const resources: Resource[] = [
   //   description: "Slideshow covering reflections, rotations, and translations with worked examples.",
   //   slideUrl: "/resources/MAT_Slides_4_12_2026.pdf",
   // },
-  {
-     id: "2026-slides-1-23-codebreakers",
-     title: "Codebreakers",
-     date: "January 23, 2026",
-     sortdate: "2026-1-23",
-     tags: ["General"],
-     slideUrl: "/slides/1_23 General Meeting (Codebreakers).pdf",
-   },
 ];
 
 export function getAllResourceTags(): ResourceTag[] {
