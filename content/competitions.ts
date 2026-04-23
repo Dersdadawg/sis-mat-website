@@ -10,7 +10,7 @@ export interface CompetitionResult {
   participants: string[];
   placement: string;
   awardLevel: "gold" | "silver" | "bronze" | "honorable" | "qualifier" | "none"
-  notes?: string;
+  notes?: string; 
   photosUrl?: string;
   featured?: boolean;
 }
